@@ -1,17 +1,17 @@
 <?php
 /*
-Plugin Name: Trading Welcome Page
+Plugin Name: Trading Begin Page
 Description: A blinking circle followed by a dramatic typewriter effect for text, leading to a call-to-action link.
 Version: 1.0
 Author: Your Name
 */
 
-function trading_welcome_page() {
-    if (is_page('welcome')) {
+function trading_begin_page() {
+    if (is_page('begin')) {
         echo '<!DOCTYPE html>
         <html>
         <head>
-            <title>Welcome</title>
+            <title>Begin</title>
             <style>
                 body {
                     background-color: black;
@@ -111,4 +111,4 @@ function trading_welcome_page() {
         exit;
     }
 }
-add_action('template_redirect', 'trading_welcome_page');
+add_action('template_redirect', 'trading_begin_page');
