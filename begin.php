@@ -1,8 +1,8 @@
 <?php
 /*
 Plugin Name: Trading Begin Page
-Description: A blinking circle followed by a dramatic typewriter effect for text, leading to a call-to-action link.
-Version: 1.1
+Description: A cinematic trading intro with a blinking circle, typewriter effect, and a dramatic entrance.
+Version: 1.2
 Author: Your Name
 */
 
@@ -42,42 +42,44 @@ function trading_begin_page() {
                 }
 
                 #text {
-                    font-size: 24px;
+                    font-size: 18px; /* Smaller font for a more subtle feel */
                     text-align: center;
                     width: 80%;
-                    max-width: 600px;
+                    max-width: 500px;
                     opacity: 0;
                     display: inline-block;
                     overflow: hidden;
                     white-space: nowrap;
-                    border-right: 3px solid white;
+                    border-right: 2px solid white;
                 }
 
                 .hidden { display: none; }
 
                 .link {
-                    font-size: 28px;
+                    font-size: 20px; /* Smaller "Enter" text */
                     margin-top: 20px;
                     opacity: 0;
-                    transition: opacity 1s ease-in-out;
+                    transition: opacity 3s ease-in-out; /* Slower and more dramatic fade-in */
                 }
 
                 .link a {
                     color: white;
                     text-decoration: none;
-                    border-bottom: 2px solid white;
+                    border-bottom: 1px solid white;
+                    padding-bottom: 3px;
+                    letter-spacing: 2px;
                 }
 
                 .link a:hover {
                     color: grey;
-                    border-bottom: 2px solid grey;
+                    border-bottom: 1px solid grey;
                 }
             </style>
         </head>
         <body>
             <div class="circle" id="circle"></div>
             <div id="text"></div>
-            <div class="link hidden" id="link"><a href="#">Enter my domain</a></div>
+            <div class="link hidden" id="link"><a href="#">Enter</a></div>
 
             <script>
                 setTimeout(() => {
@@ -95,12 +97,12 @@ function trading_begin_page() {
                         if (i < text.length) {
                             textElement.innerHTML += text.charAt(i);
                             i++;
-                            setTimeout(type, 100); // Slower typing speed (100ms per letter)
+                            setTimeout(type, 120); // Even slower typing speed (120ms per letter)
                         } else {
                             setTimeout(() => {
                                 document.getElementById("link").classList.remove("hidden");
-                                document.getElementById("link").style.opacity = "1"; // Fade in the link after 1s
-                            }, 1000);
+                                document.getElementById("link").style.opacity = "1"; // Slower fade-in for "Enter"
+                            }, 1200);
                         }
                     }
 
