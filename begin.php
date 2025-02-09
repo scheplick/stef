@@ -56,7 +56,7 @@ function trading_begin_page() {
                 .hidden { display: none; }
 
                 .link {
-                    font-size: 20px; /* Smaller "Enter" text */
+                    font-size: 14px; /* Smaller "Enter" text */
                     margin-top: 20px;
                     opacity: 0;
                     transition: opacity 3s ease-in-out; /* Slower and more dramatic fade-in */
@@ -79,7 +79,7 @@ function trading_begin_page() {
         <body>
             <div class="circle" id="circle"></div>
             <div id="text"></div>
-            <div class="link hidden" id="link"><a href="#">Enter</a></div>
+            <div class="link hidden" id="https://scheplick.com/investing_guides/"><a href="#">Enter</a></div>
 
             <script>
                 setTimeout(() => {
@@ -101,8 +101,8 @@ function trading_begin_page() {
                         } else {
                             setTimeout(() => {
                                 document.getElementById("link").classList.remove("hidden");
-                                document.getElementById("link").style.opacity = "1"; // Slower fade-in for "Enter"
-                            }, 1200);
+                                document.getElementById("link").style.opacity = "2"; // Slower fade-in for "Enter"
+                            }, 1600);
                         }
                     }
 
