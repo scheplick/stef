@@ -79,7 +79,7 @@ function trading_begin_page() {
         <body>
             <div class="circle" id="circle"></div>
             <div id="text"></div>
-            <div class="link hidden" id="https://scheplick.com/investing_guides/"><a href="#">Enter</a></div>
+            <div class="link hidden" id="link"><a href="https://scheplick.com/investing_guides/">Enter</a></div>
 
             <script>
                 setTimeout(() => {
