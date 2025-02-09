@@ -90,7 +90,7 @@ function trading_begin_page() {
 
                 function typeWriter() {
                     const textElement = document.getElementById("text");
-                    const text = "Few other endeavors test the soul like trading.";
+                    const text = "Few endeavors test the soul like trading.";
                     let i = 0;
 
                     function type() {
