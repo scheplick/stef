@@ -2,7 +2,7 @@
 /*
 Plugin Name: Trading Begin Page
 Description: A blinking circle followed by a dramatic typewriter effect for text, leading to a call-to-action link.
-Version: 1.0
+Version: 1.1
 Author: Your Name
 */
 
@@ -81,10 +81,10 @@ function trading_begin_page() {
 
             <script>
                 setTimeout(() => {
-                    document.getElementById("circle").style.display = "none"; // Hide blinking circle
+                    document.getElementById("circle").style.display = "none"; // Hide blinking circle after 3 sec
                     document.getElementById("text").style.opacity = "1"; // Show text container
                     typeWriter();
-                }, 1000); // 1-second delay before typing starts
+                }, 3000); // 3-second delay before typing starts
 
                 function typeWriter() {
                     const textElement = document.getElementById("text");
@@ -95,10 +95,12 @@ function trading_begin_page() {
                         if (i < text.length) {
                             textElement.innerHTML += text.charAt(i);
                             i++;
-                            setTimeout(type, 50); // Typing speed
+                            setTimeout(type, 100); // Slower typing speed (100ms per letter)
                         } else {
-                            document.getElementById("link").classList.remove("hidden");
-                            document.getElementById("link").style.opacity = "1"; // Fade in the link
+                            setTimeout(() => {
+                                document.getElementById("link").classList.remove("hidden");
+                                document.getElementById("link").style.opacity = "1"; // Fade in the link after 1s
+                            }, 1000);
                         }
                     }
 
