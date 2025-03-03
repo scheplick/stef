@@ -11,6 +11,10 @@ function trading_begin_page() {
         echo '<!DOCTYPE html>
         <html>
         <head>
+
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3343506422217752"
+     crossorigin="anonymous"></script>
+     
             <title>Begin</title>
             <style>
                 body {
